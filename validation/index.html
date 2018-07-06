@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<title>form validation</title>
+</head>
+<body>
+ <div class="container">
+ 	<div class="col-lg-8 m-auto d-block">
+ 		<form class="backg" action="" method="post" onsubmit="return validation();">
+ 			<h1 class="bg-success text-center">Complete validation</h1>
+ 			<div class="form-group">
+ 				<label>User name</label>
+ 				<input type="text" name="" class="form-control" id="username" placeholder="username" autocomplete="off">
+ 				<span class="no" id="name"></span><br>
+ 				<label>Password</label>
+ 				<input type="password" name="" class="form-control" id="password" placeholder="password" autocomplete="off">
+ 				<span class="no" id="_1st"></span><br>
+ 				<label>Comfirm-password</label>
+ 				<input type="password" name="" class="form-control" id="cpassword" placeholder="confirm password" autocomplete="off">
+ 				<span class="no" id="_2nd"></span><br>
+ 				<label>Phone number</label>
+ 				<input type="text" name="" class="form-control" id="fone" placeholder="phone number">
+ 				<span class="no" id="phone"></span><br>
+                <label>Email</label>
+ 				<input type="email" name="" class="form-control" id="email" placeholder="email">
+ 				<span class="no" id="mail"></span><br>
+ 				<input type="submit" value="submit"id="email" class="btn-success butt">
+ 			</div>
+ 		</form>
+ 	</div>
+ </div>
+ <script type="text/javascript">
+ 	function validation(){
+ 		var username = document.getElementById('username').value;
+ 		var password1 = document.getElementById('password').value;
+ 		var password2 = document.getElementById('cpassword').value;
+ 		var phone = document.getElementById('fone').value;
+ 		var email = document.getElementById('email').value;
+ 		if (username=="") {
+ 			document.getElementById("name").innerHTML = "YOUR USERNANE FIELD IS EMPTY";
+ 			return false;
+ 		}
+ 		else if(username.length>3) {
+ 			document.getElementById("name").innerHTML = "";
+ 		}
+
+ 		if (password1=="") {
+ 			document.getElementById("_1st").innerHTML = "YOUR password FIELD IS EMPTY";
+ 			return false;
+ 		}
+ 		else if (password1.length>2) {
+ 			document.getElementById("_1st").innerHTML = "";
+ 		}
+ 		if (password2=="") {
+ 			document.getElementById("_2nd").innerHTML = "YOUR COMFIRM-PASSWORD FIELD IS EMPTY";
+ 			return false;
+ 		}
+ 	    else if (password2.length>2) {
+ 			document.getElementById("_2nd").innerHTML = "";
+ 		}
+ 		if (phone=="") {
+ 			document.getElementById("phone").innerHTML = "YOUR PHONE NUMBER FIELD IS EMPTY";
+ 			return false;
+ 		}
+ 	    else if (phone.length>2) {
+ 			document.getElementById("phone").innerHTML = "";
+ 		}
+ 		if (email=="") {
+ 			document.getElementById("mail").innerHTML = "YOUR PHONE EMAIL FIELD IS EMPTY";
+ 			return false;
+ 		}
+
+ 	}
+ </script>
+</body>
+</html>
