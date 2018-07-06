@@ -1,0 +1,17 @@
+body{
+	background-image: url(dbanj-2.jpg);
+	color: red;
+	font-family: arial;
+	background-size: 100%;
+}
+.down{
+	margin-top: 20%;
+	font-size: 30px;
+}
+
+.overlay {
+	background: black;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+}
